@@ -1,13 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Kulim+Park:wght@200;400;600;700&family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden; /* Hide scrollbars */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.hamburger {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  transition: all 0.25s;
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background: black;
+  transform: rotate(0);
+  transition: all 0.5s;
+}
+
+.hamburger-middle{
+  transform: translateY(7px);
+}
+
+.hamburger-top{
+  transform: translateY(14px);
+}
+
+.open{
+  transform: rotate(90deg);
+  transform: translateY(0px);
+}
+
+.open .hamburger-top{
+  transform: rotate(45deg) translateY(6px) translate(6px);
+}
+.open .hamburger-middle{
+  display: none;
+}
+.open .hamburger-bottom{
+  transform: rotate(-45deg) translateY(6px) translate(-6px);
+}
+
+
+body::-webkit-scrollbar {
+  width: 12px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: orange;        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 3px solid orange;  /* creates padding around scroll thumb */
+}
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Header */
+.header {
+  padding: 1rem 0;
+}
+.header__container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.header__hamburger {
+  position: absolute;
+  right: 3rem;
+  top: 0.7rem;
+}
+
+/* Navbar */
+.navbar {
+  display: none;
+  align-items: center;
+  gap: 1rem;
+}
+.nav-mobile {
+  position: absolute;
+  top: 58px;
+  z-index: 9;
+  background: #fff;
+  width: 100%;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+.nav-mobile__item {
+  border-bottom: 1px solid #e9e9e9;
+  padding: .5rem;
+  text-align: center;
+}
+.nav-mobile__item:last-child {
+  border: none;
+  padding-bottom: 0;
+}
+
+/* Hero */
+.hero {
+  background: #586b64;
+}
+.hero__container {
+  display: flex;
+  padding-bottom: 1rem;
+}
+.hero__block {
+  flex-grow: 1;
+  padding: 1rem;
+}
+.hero__block--image {
+  display: none;
+}
+.hero__title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #f4ce14;
+}
+.hero__site {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+.hero__text {
+  color: #ffffff;
+}
+.hero__btn {
+  background: #f4ce14;
+  padding: 0.5rem 1rem;
+  border: none;
+  margin-top: 2rem;
+}
+.hero__block--text {
+  display: flex;
+  align-items: baseline;
+  flex-direction: column;
+  justify-content: center;
+}
+.hero__img {
+  max-width: 100%;
+  height: auto;
+}
+.highlights__specials {
+  overflow-y: hidden;
+  display: grid;
+  grid-auto-columns: 100%;
+  grid-column-gap: 10px;
+  grid-auto-flow: column;
+  padding: 25px 0px;
+  list-style: none;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  margin-bottom: 1rem;
+}
+.highlights__title {
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: #586b64;
+  margin: 1rem 0;
+}
+
+.cardish {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background: var(--white);
+  border-radius: 12px;
+  border: 1px solid #eee;
+  scroll-snap-align: start;
+  transition: all 0.2s;
+}
+.cardish__container-image {
+  height: 10rem;
+  overflow: hidden;
+  border-radius: 4px;
+}
+.cardish__image {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.cardish__row {
+  display: flex;
+  justify-content: space-between;
+  margin: .5rem 0 .75rem;
+}
+.cardish__name {
+  font-size: 1rem;
+  font-weight: 500;
+}
+.cardish__price {
+  font-weight: 700;
+}
+.cardish__description {
+  font-size: .9rem;
+  color: #222;
+  margin-bottom: 1rem;
+}
+.cardish__button {
+  background: #f4ce14;
+  padding: 0.5rem 1rem;
+  border: none;
+  margin-top: auto;
+  text-align: center;
+}
+
+.footer {
+  background: #586b64;
+}
+.footer__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 1rem 0 0;
+}
+.footer__title {
+  font-size: 1.5rem;
+  color: #ffffff;
+  font-weight: 500;
+  text-transform: capitalize;
+  line-height: 3rem;
+}
+.footer__logo {
+  margin: 0.5rem 0 1rem;
+}
+.footer__copy {
+  color: #ffffff;
+  background: #495e57;
+  width: 100%;
+  padding: 1rem;
+}
+.about__block--image {
+  display: none;
+}
+.about__container {
+  display: flex;
+  gap: 2rem;
+}
+.about__text {
+  margin-bottom: 1rem;
+}
+.about {
+  padding: 2rem 0 2rem;
+  background: whitesmoke;
+  margin-top: 2rem;
+}
+img.about__img {
+  max-height: 50rem;
+}
+.about__title {
+  font-size: 1.85rem;
+  color: #586b64;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.about__site {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #f4ce14;
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 480px) {
+  .highlights__specials {
+    grid-auto-columns: calc(calc(100% / 2) - 20px);
+  }
+}
+@media screen and (min-width: 780px) {
+  .navbar {
+    display: flex;
+  }
+  .header__hamburger {
+    display: none;
+  }
+  .hero__block--image {
+    display: flex;
+  }
+  .highlights__specials {
+    grid-auto-columns: calc(calc(100% / 3) - 20px);
+    grid-column-gap: 30px;
+  }
+  .about__block--image {
+    display: flex;
+  }
 }
