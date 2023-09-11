@@ -6,15 +6,11 @@ This is a concept website for a resturant named Little Lemon, which included the
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
-- [Author](#author)
-
 ## Overview
 
 ### The challenge
@@ -22,18 +18,6 @@ This is a concept website for a resturant named Little Lemon, which included the
 - Build out the project to the designs provided
 - Making sure it's fully responsive and works for all screen widths
 - Making sure the reserve a table page and forms inside it comply to Ux/Ui design prenciples
-
-### Screenshot
-
-![](./src/components/imgs/HomePage1.png)
-![](./src/components/imgs/HomePage2.png)
-![](./src/components/imgs/HomePage3.png)
-![](./src/components/imgs/Booking1.png)
-![](./src/components/imgs/Booking2.png)
-
-### Links
-
-- Live Site URL: (https://ladel46.github.io/Little-Lemon-Concept-Website)
 
 ## My process
 
@@ -67,5 +51,3 @@ In the future works, im aiming to improve my animation skills to make my website
 - [W3Schools Css Refrence](https://www.w3schools.com/cssref/index.php) - Its has any questions you might have of Css answered with live examples, very good for any type of Css research.
 
 ## Author
-
-- LinkedIn - [Adel Hafri](https://www.linkedin.com/in/adel-hafri/)
