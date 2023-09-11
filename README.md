@@ -12,6 +12,10 @@ This is a concept website for a resturant named Little Lemon, which included the
 
 - Live Site URL: (https://incomparable-pavlova-9b4e45.netlify.app/)
 
+### Screenshot
+
+![](./src/components/imgs/homepage.png)
+
 ### Built with
 
 - Semantic HTML5 markup
