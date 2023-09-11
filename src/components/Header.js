@@ -3,10 +3,9 @@ import Logo from "./imgs/Logo.svg";
 import Navbar from "./Navbar";
 import MobileMenu from "./MobileMenu";
 import { AnimatePresence } from "framer-motion";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function Header() {
-  const navigate = useNavigate();
 
   const [showMenu, setShowMenu] = React.useState(false);
   const HandleClick = () => {

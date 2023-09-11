@@ -1,5 +1,5 @@
 import React from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import tableLg from "./imgs/tableLg.png";
 import tableMd from "./imgs/tableMd.png";
 import tableSm from "./imgs/tableSm.png";
@@ -654,7 +654,9 @@ export default function ResponsiveTable(props) {
             </div>
           </div>
         );
-    }
+      default:
+        break;
+      }
   };
   return <>{table(props.seats)}</>;
 }

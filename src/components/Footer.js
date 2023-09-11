@@ -1,8 +1,6 @@
 import React from "react";
 import Logo2 from "./imgs/WhiteLogo.jpg";
 
-
-
 export default function Footer() {
 
   return (
