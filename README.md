@@ -8,7 +8,9 @@ This is a concept website for a resturant named Little Lemon, which included the
 - Making sure it's fully responsive and works for all screen widths
 - Making sure the reserve a table page and forms inside it comply to Ux/Ui design prenciples
 
-## My process
+### Preview
+
+- Live Site URL: (...)
 
 ### Built with
 

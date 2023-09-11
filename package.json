@@ -1,6 +1,5 @@
 {
-  "homepage": "https://ladel46.github.io/Little-Lemon-Concept-Website",
-  "name": "protfolio-project",
+  "name": "little-lemon",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
